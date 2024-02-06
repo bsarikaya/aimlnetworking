@@ -174,6 +174,14 @@ We list below only some of the key issues identified:
 
 * enhancing the architecture and related functions to support management and/or configuration for split AI/ML operation, and in-time transfer of AI/ML models. The management and configuration aspects including discovery of required nodes for split AI/ML operation and support of different models of AI/ML operation splitting.
 
+
+## Future Work
+
+In order for this draft to be a problem statement on AI/ML networking it should identify the problems that possibly need a new protocol to be developed or need to identify extensions to an existing protocol. One possibility in that direction could be refining the work points identified above and formulating them in terms of existing or to be defined in the future security and privacy protocols.
+
+Use cases similar to the ones identified above need to defined. These use cases should make it clear why the security and privacy protocols are needed.  
+
+ 
 # Security Considerations
 
 Security considerations of AI/ML Networking is TBD.
