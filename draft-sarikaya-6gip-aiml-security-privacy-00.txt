@@ -3,10 +3,10 @@
 
 
 Network Working Group                                        B. Sarikaya
-Internet-Draft                                                          
+Internet-Draft                                              Unaffiliated
 Intended status: Standards Track                               R. Schott
-Expires: 21 July 2024                                   Deutsche Telekom
-                                                         18 January 2024
+Expires: 9 August 2024                                  Deutsche Telekom
+                                                         6 February 2024
 
 
  Security and Privacy Implications of 3GPP AI/ML Networking Studies for
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 21 July 2024.
+   This Internet-Draft will expire on 9 August 2024.
 
 Copyright Notice
 
@@ -53,9 +53,9 @@ Copyright Notice
 
 
 
-Sarikaya & Schott         Expires 21 July 2024                  [Page 1]
+Sarikaya & Schott         Expires 9 August 2024                 [Page 1]
 
-Internet-Draft    AI/ML  security privacy implications      January 2024
+Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
    This document is subject to BCP 78 and the IETF Trust's Legal
@@ -74,13 +74,14 @@ Table of Contents
    3.  Architecture  . . . . . . . . . . . . . . . . . . . . . . . .   5
    4.  Security and Privacy  . . . . . . . . . . . . . . . . . . . .   6
    5.  Work Points . . . . . . . . . . . . . . . . . . . . . . . . .   7
-   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   8
-   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   8
-   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   8
-   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   8
-     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   8
-     9.2.  Informative References  . . . . . . . . . . . . . . . . .   8
-   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .   9
+     5.1.  Future Work . . . . . . . . . . . . . . . . . . . . . . .   8
+   6.  Security Considerations . . . . . . . . . . . . . . . . . . .   9
+   7.  IANA Considerations . . . . . . . . . . . . . . . . . . . . .   9
+   8.  Acknowledgements  . . . . . . . . . . . . . . . . . . . . . .   9
+   9.  References  . . . . . . . . . . . . . . . . . . . . . . . . .   9
+     9.1.  Normative References  . . . . . . . . . . . . . . . . . .   9
+     9.2.  Informative References  . . . . . . . . . . . . . . . . .   9
+   Authors' Addresses  . . . . . . . . . . . . . . . . . . . . . . .  10
 
 1.  Introduction
 
@@ -90,7 +91,7 @@ Table of Contents
    works, machine learning (ML) is defined as the field of study that
    gives computers the ability to learn without being explicitly
    programmed.  Since it is believed that the main computational
-   elements a human brain are 86 billion neurons, the more popular ML
+   elements in a human brain are 86 billion neurons, the more popular ML
    approaches are using “neural network” as the model.  Neural networks
    (NN) take their inspiration from the notion that a neuron’s
    computation involves a weighted sum of the input values.  A
@@ -105,15 +106,15 @@ Table of Contents
    hidden layer are called deep neural networks (DNN).  In contrast to
    the conventional shallow-structured NN architectures, DNNs, also
    referred to as deep learning, made amazing breakthroughs since 2010s
-   in many essential application areas because they can achieve human-
 
 
 
-Sarikaya & Schott         Expires 21 July 2024                  [Page 2]
+Sarikaya & Schott         Expires 9 August 2024                 [Page 2]
 
-Internet-Draft    AI/ML  security privacy implications      January 2024
+Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
+   in many essential application areas because they can achieve human-
    level accuracy or even exceed human accuracy.  Deep learning
    techniques use supervised and/or unsupervised strategies to
    automatically learn hierarchical representations in deep
@@ -164,10 +165,9 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
 
 
 
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 3]
+Sarikaya & Schott         Expires 9 August 2024                 [Page 3]
 
-Internet-Draft    AI/ML  security privacy implications      January 2024
+Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
    This document aims to present Artificial Intelligence Machine
@@ -176,7 +176,7 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
 
 2.  Training and Federated Learning
 
-   Training is a process in which a AI/ML model learns to perform its
+   Training is a process in which an AI/ML model learns to perform its
    given tasks, more specifically, by optimizing the value of the
    weights in the DNN.  A DNN is trained by inputting a training set,
    which are often correctly-labelled training samples.  Taking image
@@ -221,9 +221,9 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
 
 
 
-Sarikaya & Schott         Expires 21 July 2024                  [Page 4]
+Sarikaya & Schott         Expires 9 August 2024                 [Page 4]
 
-Internet-Draft    AI/ML  security privacy implications      January 2024
+Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
    Next, the updated global model is distributed to the UEs via 5G DL
@@ -244,50 +244,78 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
    (publishers and subscribers) which are new functions in the system
    [IsNo20].
 
-   3GPP core network has a new server function: The Network Data
-   Analytics Function (NWDAF) provides analytics to 5GC Network
-   Functions (NFs) and Operations and Management (OAM).  An NWDAF may
-   contain the Analytics logical function (AnLF): A logical function in
-   NWDAF, which performs inference, derives analytics information and
-   Model Training logical function (MTLF) which trains Machine Learning
-   (ML) models and exposes new training services.  The Application AI/ML
-   operation logic is controlled by an Application Function (AF).  Any
-   AF request to the 5G System in the context of 5GS assistance to
-   Application AI/ML operation should be authorized by the 5GC
-   [TR23.700-80].
+   3GPP core, i.e. 5GC network, aka mobile core network, which
+   establishes reliable, secure connectivity to the network for end
+   users and provides access to its services has a new server function:
+   The Network Data Analytics Function (NWDAF) provides analytics to 5GC
+   Network Functions (NFs) and Operations and Management (OAM).  An
+   NWDAF may contain the Analytics logical function (AnLF): A logical
+   function in NWDAF, which performs inference, derives analytics
+   information and Model Training logical function (MTLF) which trains
+   Machine Learning (ML) models and exposes new training services.  The
+   Application AI/ML operation logic is controlled by an Application
+   Function (AF).  Any AF request to the 5G System in the context of 5G
+   System (5GS) (which consists of the 5GC (5G Core Network), 5G-AN (5G
+   Access Network) and UE) assistance to Application AI/ML operation
+   should be authorized by the 5GC [TR23.700-80].
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Sarikaya & Schott         Expires 9 August 2024                 [Page 5]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
 
    NWDAF relies on various sources of data input including data from 5G
-   core NFs, AFs, 5G core repositories, e.g., NRF, UDM, etc., and OAM
-   data, including performance measurements (PMs), KPIs, configuration
-   management data and alarms.  An NWDAF may provide in turn analytics
-   output results to 5G core NF, AFs, and OAM.  Optionally, Data
-   Collection Coordination Function (DCCF) and Messaging Framework
-   Adaptor Function (MFAF) may be involved to distribute and collect
-   repeated data towards or from various data sources.  Note that AF
-   contains a Network Exposure Function (NEF) if it is an untrusted AF.
-   NEF may assist the AI/ML application server in scheduling available
-   UE(s) to participate in the AI/ML operation (e.g.  Federated
-   Learning).  Also, 5GC may assist the selection of UEs to serve as FL
-   clients, by providing a list of target member UE(s), then subscribing
-   to the NEF to be notified about the subset list of UE(s) (i.e. list
-   of candidate UE(s)) that fulfill certain filtering criteria
-   [TR23.700-82].
+   core NFs, AFs, 5G core repositories, e.g., Network Repository
+   Function (NRF), Unified Data Management (UDM), etc., and OAM data,
+   including performance measurements (PMs), Key Performance Indicators
+   (KPIs), configuration management data and alarms.  An NWDAF may
+   provide in turn analytics output results to 5G core NF, AFs, and OAM.
+   Optionally, Data Collection Coordination Function (DCCF) and
+   Messaging Framework Adaptor Function (MFAF) may be involved to
+   distribute and collect repeated data towards or from various data
+   sources.  Note that AF contains a Network Exposure Function (NEF) if
+   it is an untrusted AF.  NEF may assist the AI/ML application server
+   in scheduling available UE(s) to participate in the AI/ML operation
+   (e.g.  Federated Learning).  Also, 5GC may assist the selection of
+   UEs to serve as FL clients, by providing a list of target member
+   UE(s), then subscribing to the NEF to be notified about the subset
+   list of UE(s) (i.e. list of candidate UE(s)) that fulfill certain
+   filtering criteria [TR23.700-82].
 
-
-
-
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 5]
-
-Internet-Draft    AI/ML  security privacy implications      January 2024
-
+   [TR23.700-82] expands upon the data analytics as a useful tool to
+   optimize the service offering by predicting events related to the
+   network or UE conditions.  These services however can also assist the
+   3rd party AI/ML application service provider for the AI/ML model
+   distribution, transfer, training for various applications (e.g.,
+   video/speech recognition, robot control, automotive).  This takes us
+   to the concept of the application enablement layer can play role on
+   the exposure of AI/ML services from different 3GPP domains to the
+   Application Service Providers (ASP) in a unified manner.
 
 4.  Security and Privacy
 
    AI/ML networking raises many security and privacy issues.
-   [TR23.700-80] and [TR23.700-82] identify a number of key issues (with
-   the number currently being 7) and [TR33.898] presents a study on one
-   of the key issues which will be detailed here.
+   [TR23.700-80] and [TR23.700-82] identify a number of key issues and
+   [TR33.898] presents a study on one of the key issues which will be
+   detailed here.
 
    [TR23.700-80] studies the exposure of different types of assistance
    information such as traffic rate, packet delay, packet loss rate,
@@ -301,6 +329,15 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
    and to avoid exposing information that is unnecessary for AI/ML
    operations.
 
+
+
+
+
+Sarikaya & Schott         Expires 9 August 2024                 [Page 6]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
+
    Because of the use of Restful API which depend on the use of HTTP
    protocol, OAuth [RFC6749] protocol seems to be the natural choice
    here for authorization.
@@ -308,7 +345,7 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
    One solution can be developed reusing existing mechanism for
    authorization of 5GC assistance information exposure to AF.  The
    solution is based on reusing the OAuth-based authorization mechanism
-   OAuth [RFC6749] protocol extends traditional client-server
+   OAuth [RFC6749] protocol which extends traditional client-server
    authentication by providing a third party client with a token.  Since
    such token resembles a different set of credentials compared to those
    of the resource owner, the device needs not be allowed to use the
@@ -330,14 +367,6 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
    The interface between the NEF and the Application Function needs
    integrity protection, replay protection, confidentiality protection
    for communication between the NEF and Application Function, and
-
-
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 6]
-
-Internet-Draft    AI/ML  security privacy implications      January 2024
-
-
    mutual authentication between the NEF and Application Function and
    protect internal 5G Core network information.  The NEF also enable
    secure provision of information in the 3GPP network by authenticated
@@ -356,6 +385,14 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
    only one of many possible key issues.  Each key issue has been in
    depth investigated in [TR23.700-80] and [TR23.700-82] from which new
    solutions can be developed.
+
+
+
+
+Sarikaya & Schott         Expires 9 August 2024                 [Page 7]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
 
    We list below only some of the key issues identified:
 
@@ -384,22 +421,42 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
 
    *  supporting federated learning at application enablement layers
 
-
-
-
-
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 7]
-
-Internet-Draft    AI/ML  security privacy implications      January 2024
-
-
    *  enhancing the architecture and related functions to support
       management and/or configuration for split AI/ML operation, and in-
       time transfer of AI/ML models.  The management and configuration
       aspects including discovery of required nodes for split AI/ML
       operation and support of different models of AI/ML operation
-      splitting.
+      splitting in which the AI/ML operation/model is split into
+      multiple parts according to the current task and environment.
+
+5.1.  Future Work
+
+   A use case document is needed.  So far 3GPP identified many use cases
+   and some of which are described above in this document.  All or some
+   of these usage areas of AI/ML can further be elaborated in a use case
+   document These use cases should make it clear why the security and
+   privacy protocols are needed.
+
+
+
+
+
+
+
+
+
+Sarikaya & Schott         Expires 9 August 2024                 [Page 8]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
+
+   A problem statement on AI/ML networking document is needed.  Such a
+   document should identify the problems that possibly need a new
+   protocol to be developed or need to identify extensions to an
+   existing protocol.  One possibility in that direction could be
+   refining the work points identified above and formulating them in
+   terms of existing or to be defined in the future security and privacy
+   protocols.
 
 6.  Security Considerations
 
@@ -438,17 +495,21 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
               <https://www.ericsson.com/en/reports-and-papers/research-
               papers/secure-federated-learning-5g>.
 
+
+
+
+
+
+
+Sarikaya & Schott         Expires 9 August 2024                 [Page 9]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
+
    [Srini21]  Srinivasan, A., "Difference between distributed learning
               versus federated learning algorithms", November 2021,
               <https://www.kdnuggets.com/2021/11/difference-distributed-
               learning-federated-learning-algorithms.html>.
-
-
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 8]
-
-Internet-Draft    AI/ML  security privacy implications      January 2024
-
 
    [TR22.874] 3rd Generation Partnership Project, "Study on traffic
               characteristics and performance requirements for AI/ML
@@ -473,6 +534,7 @@ Internet-Draft    AI/ML  security privacy implications      January 2024
 Authors' Addresses
 
    Behcet Sarikaya
+   Unaffiliated
    Email: sarikaya@ieee.org
 
 
@@ -495,10 +557,4 @@ Authors' Addresses
 
 
 
-
-
-
-
-
-
-Sarikaya & Schott         Expires 21 July 2024                  [Page 9]
+Sarikaya & Schott         Expires 9 August 2024                [Page 10]
