@@ -14,7 +14,7 @@
 <?rfc compact="yes"?>
 <?rfc subcompact="no"?>
 <rfc xmlns:xi="http://www.w3.org/2001/XInclude" ipr="trust200902" docName="draft-sarikaya-6gip-aiml-security-privacy-00" category="std" consensus="true" tocDepth="3" tocInclude="true" sortRefs="true" symRefs="true" version="3">
-  <!-- xml2rfc v2v3 conversion 3.19.2 -->
+  <!-- xml2rfc v2v3 conversion 3.19.4 -->
   <front>
     <title abbrev="AI/ML  security privacy implications">Security and Privacy Implications of 3GPP AI/ML Networking Studies for 6G</title>
     <seriesInfo name="Internet-Draft" value="draft-sarikaya-6gip-aiml-security-privacy-00"/>
@@ -28,7 +28,7 @@
       <organization abbrev="Deutsche Telekom">Deutsche Telekom</organization>
       <address>
         <postal>
-          <street>Deutsche-Telekom-Allee 9</street>
+          <street>Ida-Rhodes-Strasse 2</street>
           <city>Darmstadt</city>
           <code>64295</code>
           <country>Germany</country>
@@ -36,7 +36,7 @@
         <email>Roland.Schott@telekom.de</email>
       </address>
     </author>
-    <date year="2024" month="February" day="06"/>
+    <date year="2024" month="February" day="08"/>
     <abstract>
       <?line 89?>
 
@@ -51,7 +51,7 @@
       <t>Artificial Intelligence (AI) has historically been defined as the science and engineering to build intelligent machines capable of carrying out tasks as humans do. Inspired from the way human brain works, machine learning (ML) is defined as the field of study that gives computers the ability to learn without being explicitly programmed. Since it is believed that the main computational elements in a human brain are 86 billion neurons, the more popular ML approaches are using “neural network” as the model. Neural networks (NN) take their inspiration from the notion that a neuron’s computation involves a weighted sum of the input values. A computational neural network contains the neurons in the input layer which receive some values and propagate them to the neurons in the middle layer of the network, which is also called a “hidden layer”. The weighted sums from one or more hidden layers are ultimately propagated to the output layer, which presents the final outputs of the network.</t>
       <t>Neural networks having more than three layers, i.e., more than one hidden layer are called deep neural networks (DNN). In contrast to the conventional shallow-structured NN architectures, DNNs, also referred to as deep learning, made amazing breakthroughs since 2010s in many essential application areas because they can achieve human-level accuracy or even exceed human accuracy. Deep learning techniques use supervised and/or unsupervised strategies to automatically learn hierarchical representations in deep architectures for classification. With a large number of hidden layers, the superior performance of DNNs comes from its ability to extract high-level features from raw sensory data after using statistical learning over a large amount of data to obtain an effective representation of an input space. In recent years, thanks to the big data obtained from the real world, the rapidly increased computation capacity and continuously-evolved algorithms, DNNs have become the most popular ML models for many AI applications.</t>
       <t>The performance of DNNs is gained at the cost of high computational complexity. Hence more efficient compute engines are often used, e.g. graphics processing units (GPU) and network processing units (NPU). Compared to the inference which only involves the feedforward process, the training often requires more computation and storage resources because it involves also the back propagation process.</t>
-      <t>Many DNN models have been developed over the past two decades. Each of these models has a different “network architecture” in terms of number of layers, layer types, layer shapes (i.e., filter size, number of channels and filters), and connections between layers. Three popular structures of DNNs: multilayer perceptrons (MLPs), convolution neural networks (CNNs), and recurrent neural networks (RNNs). Multilayer perceptrons (MLP) model is the most basic DNN, which is composed of a series of fully connected layers. In a fully connected layer, all outputs are connected to all inputs. Hence MLP requires a significant amount of storage and computation.</t>
+      <t>Many DNN models have been developed over the past two decades. Each of these models has a different “network architecture” in terms of number of layers, layer types, layer shapes (i.e., filter size, number of channels and filters), and connections between layers. Three popular structures of DNNs: multilayer perceptron (MLPs), convolution neural networks (CNNs), and recurrent neural networks (RNNs). Multilayer perceptron (MLP) model is the most basic DNN, which is composed of a series of fully connected layers. In a fully connected layer, all outputs are connected to all inputs. Hence MLP requires a significant amount of storage and computation.</t>
       <t>A convolution neural network (CNN) is composed of multiple convolutional layers. Applying various convolutional filters, CNN models can capture the high-level representation of the input data, making it popular for image classification and speech recognition tasks. Recurrent neural network (RNN) models are another type of DNNs, which use sequential data feeding. The input of RNN consists of the current input and the previous samples. RNN models have been widely used in the natural language processing task on mobile devices, e.g., language modeling, machine translation, question answering, word embedding, and document classification.</t>
       <t>AI/ML has very many applications, however, two areas have emerged that involve networking. One is the network optimization, time-series forecasting, predictive maintenance, Quality of Experience (QoE) modeling and the other is speech recognition, image recognition, video processing. In the former, the end device is the base station and the latter the UE <xref target="TR22.874"/>.</t>
       <t>This document aims to present Artificial Intelligence Machine Learning (AIML) networking issues that may require further protocol work, mostly on the security and privacy aspects of networking.</t>
@@ -78,7 +78,7 @@
       <t>Because of the use of Restful API which depend on the use of HTTP protocol, OAuth <xref target="RFC6749"/> protocol seems to be the natural choice here for authorization.</t>
       <t>One solution can be developed reusing existing mechanism for authorization of 5GC assistance information exposure to AF. The solution is based on reusing the OAuth-based authorization mechanism 
 OAuth <xref target="RFC6749"/> protocol which extends traditional client-server authentication 
-by providing a third party client with a token.  Since such
+by providing a third-party client with a token.  Since such
    token resembles a different set of credentials compared to those of
    the resource owner, the device needs not be allowed to use the
    resource owner's credentials to access protected resources.</t>
@@ -118,7 +118,7 @@ by providing a third party client with a token.  Since such
       </ul>
       <section anchor="future-work">
         <name>Future Work</name>
-        <t>A use case document is needed. So far 3GPP identified many use cases and some of which are described above in this document. All or some of these usage areas of AI/ML can further be elaborated in a use case document These use cases should make it clear why the security and privacy protocols are needed.</t>
+        <t>A use case document is needed. So far 3GPP identified many use cases and some of which are described above in this document. New set of use cases on Rule Based Automation, Autonomous Networks, Automated Testing, Energy Efficiency and so on could be added to the existing use cases. All or some of these usage areas of AI/ML can further be elaborated in a use case document These use cases should make it clear why the security and privacy protocols are needed.</t>
         <t>A problem statement on AI/ML networking document is needed. Such a document should identify the problems that possibly need a new protocol to be developed or need to identify extensions to an existing protocol. One possibility in that direction could be refining the work points identified above and formulating them in terms of existing or to be defined in the future security and privacy protocols.</t>
       </section>
     </section>
@@ -258,161 +258,163 @@ by providing a third party client with a token.  Since such
     </references>
   </back>
   <!-- ##markdown-source:
-H4sIAAAAAAAAA61c224bR5q+51MUMBeWFiQlyznZNzuyLDnGWIrHkpHLQbG7
-RNaq2c3p6pbMBAHmNRbYfbk8yX7/oaqrKcoxdgLMJGIfqv76j99/6Mxms0no
-bF3+w1ZN7V6Zru3dxG9a/it0J8fHL49PJmVT1HaN22Vrb7tZsK2/s1s7+27p
-NzPr19UsuKJvfbedbVp/b4vt7Ph4UtjulQldOdn4VxNjuqZ4ZZ5tXXgmP5r1
-xhbd6FLpNt0KV17ob1+Xrs4eCdt1625DdqFpu/EVLLvGO9kVX1eejpY9Md44
-9IvhWt08m3S+q+iFaz2UAYPMBzmYebfeVB5H800dTHNrXrz98MGcvju6fG+u
-XPfQtHe+Xprrri+9C+a2ac13b59N7GLRuvtX+qCJ7DLKLuOzVSdvbIftT45P
-vpnYvls17avJDMfAmV7PzbUyH4Q37fKV+VTb21tfebxT4prI6bVbFa7Ln3Vr
-6yuIQ6/81Tvn5lggrvwRKxerpuvSGh+bis6drvJub1zfhWLlzI2r3F2zxvV4
-tD23AoTjuuHWTG/NTqvKOfOSpAEu4AHbrqGHZcfyKbH7d9+cvPyWf/V11+KR
-t65d23o7HEXomwt9f+1k5XnpJnWDJzt/70jrPl6cnbw8/kb//O77b17qnz98
-8813ryYTX9/mj998PDmZ//A9Pw8VFEUgYW5NU8MmiNeFKVa2hbq41ofOF4H1
-Y+NaXqkunGndP3vfOlZEVgER+xonq2iROty6Fnw337695o1UzIZ/zITVL9oS
-h65dy1phPti2w4+w8hvoYvNfruj46TIqy/PZ8xM5wYv598fHsx+O9x/i27fm
-ehs6tzbX/WYDAxoonC1scBC5a+994cKfRtrJLmkn+0mzm2QFprJb8CjskgjT
-+ZOJezF7/hxX3oWr5iSyzLZL0ttV123Cq6Ojh4eHOYRdhNDUc/iKI1cftY4I
-CzPIfraxkH7ApeBsW6zib7ZyN7t1JRHjylmF2zXcw+zb5ej8/Jy5iM+Z9/qc
-qIi5bBa+ctG9jE6uB2cTvpzjEPaOiOTL0ZAvwQEstHOPefXsWb7A2dxcNS3p
-8Oj9M9tWOzfylxMjj0XK5N1a+L4ZmZaKBuw9Pz83b6tmYStzBh/d18mJnjU1
-zMGR4Ry8ff/T6/Ozny4vecHDKVxH4dYL1075Aha7bn3tT54/Lai7su6XuBpY
-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
-2y2tRR+zEzqZ/B+mMHOwQEoAAA==
+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
+M2DXSgAA
 
 -->
 
