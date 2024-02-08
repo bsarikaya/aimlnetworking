@@ -26,7 +26,7 @@ author:
   name: Roland Schott
   org: Deutsche Telekom
   abbrev: Deutsche Telekom
-  street: Deutsche-Telekom-Allee 9
+  street: Ida-Rhodes-Strasse 2
   city: Darmstadt
   code: 64295
   country: Germany
@@ -102,7 +102,7 @@ Neural networks having more than three layers, i.e., more than one hidden layer 
 
 The performance of DNNs is gained at the cost of high computational complexity. Hence more efficient compute engines are often used, e.g. graphics processing units (GPU) and network processing units (NPU). Compared to the inference which only involves the feedforward process, the training often requires more computation and storage resources because it involves also the back propagation process.
 
-Many DNN models have been developed over the past two decades. Each of these models has a different “network architecture” in terms of number of layers, layer types, layer shapes (i.e., filter size, number of channels and filters), and connections between layers. Three popular structures of DNNs: multilayer perceptrons (MLPs), convolution neural networks (CNNs), and recurrent neural networks (RNNs). Multilayer perceptrons (MLP) model is the most basic DNN, which is composed of a series of fully connected layers. In a fully connected layer, all outputs are connected to all inputs. Hence MLP requires a significant amount of storage and computation.
+Many DNN models have been developed over the past two decades. Each of these models has a different “network architecture” in terms of number of layers, layer types, layer shapes (i.e., filter size, number of channels and filters), and connections between layers. Three popular structures of DNNs: multilayer perceptron (MLPs), convolution neural networks (CNNs), and recurrent neural networks (RNNs). Multilayer perceptron (MLP) model is the most basic DNN, which is composed of a series of fully connected layers. In a fully connected layer, all outputs are connected to all inputs. Hence MLP requires a significant amount of storage and computation.
 
 A convolution neural network (CNN) is composed of multiple convolutional layers. Applying various convolutional filters, CNN models can capture the high-level representation of the input data, making it popular for image classification and speech recognition tasks. Recurrent neural network (RNN) models are another type of DNNs, which use sequential data feeding. The input of RNN consists of the current input and the previous samples. RNN models have been widely used in the natural language processing task on mobile devices, e.g., language modeling, machine translation, question answering, word embedding, and document classification. 
 
@@ -144,7 +144,7 @@ Because of the use of Restful API which depend on the use of HTTP protocol, OAut
 
 One solution can be developed reusing existing mechanism for authorization of 5GC assistance information exposure to AF. The solution is based on reusing the OAuth-based authorization mechanism 
 OAuth {{RFC6749}} protocol which extends traditional client-server authentication 
-by providing a third party client with a token.  Since such
+by providing a third-party client with a token.  Since such
    token resembles a different set of credentials compared to those of
    the resource owner, the device needs not be allowed to use the
    resource owner's credentials to access protected resources. 
@@ -180,7 +180,7 @@ We list below only some of the key issues identified:
 
 ## Future Work
 
-A use case document is needed. So far 3GPP identified many use cases and some of which are described above in this document. All or some of these usage areas of AI/ML can further be elaborated in a use case document These use cases should make it clear why the security and privacy protocols are needed. 
+A use case document is needed. So far 3GPP identified many use cases and some of which are described above in this document. New set of use cases on Rule Based Automation, Autonomous Networks, Automated Testing, Energy Efficiency and so on could be added to the existing use cases. All or some of these usage areas of AI/ML can further be elaborated in a use case document These use cases should make it clear why the security and privacy protocols are needed. 
 
 A problem statement on AI/ML networking document is needed. Such a document should identify the problems that possibly need a new protocol to be developed or need to identify extensions to an existing protocol. One possibility in that direction could be refining the work points identified above and formulating them in terms of existing or to be defined in the future security and privacy protocols.
 
