@@ -5,8 +5,8 @@
 Network Working Group                                        B. Sarikaya
 Internet-Draft                                              Unaffiliated
 Intended status: Standards Track                               R. Schott
-Expires: 9 August 2024                                  Deutsche Telekom
-                                                         6 February 2024
+Expires: 11 August 2024                                 Deutsche Telekom
+                                                         8 February 2024
 
 
  Security and Privacy Implications of 3GPP AI/ML Networking Studies for
@@ -36,7 +36,7 @@ Status of This Memo
    time.  It is inappropriate to use Internet-Drafts as reference
    material or to cite them other than as "work in progress."
 
-   This Internet-Draft will expire on 9 August 2024.
+   This Internet-Draft will expire on 11 August 2024.
 
 Copyright Notice
 
@@ -53,7 +53,7 @@ Copyright Notice
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 1]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 1]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -109,7 +109,7 @@ Table of Contents
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 2]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 2]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -138,9 +138,9 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
    of these models has a different “network architecture” in terms of
    number of layers, layer types, layer shapes (i.e., filter size,
    number of channels and filters), and connections between layers.
-   Three popular structures of DNNs: multilayer perceptrons (MLPs),
+   Three popular structures of DNNs: multilayer perceptron (MLPs),
    convolution neural networks (CNNs), and recurrent neural networks
-   (RNNs).  Multilayer perceptrons (MLP) model is the most basic DNN,
+   (RNNs).  Multilayer perceptron (MLP) model is the most basic DNN,
    which is composed of a series of fully connected layers.  In a fully
    connected layer, all outputs are connected to all inputs.  Hence MLP
    requires a significant amount of storage and computation.
@@ -165,7 +165,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 3]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 3]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -221,7 +221,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 4]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 4]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -277,7 +277,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 5]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 5]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -333,7 +333,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 6]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 6]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -346,7 +346,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
    authorization of 5GC assistance information exposure to AF.  The
    solution is based on reusing the OAuth-based authorization mechanism
    OAuth [RFC6749] protocol which extends traditional client-server
-   authentication by providing a third party client with a token.  Since
+   authentication by providing a third-party client with a token.  Since
    such token resembles a different set of credentials compared to those
    of the resource owner, the device needs not be allowed to use the
    resource owner's credentials to access protected resources.
@@ -389,7 +389,7 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                 [Page 7]
+Sarikaya & Schott        Expires 11 August 2024                 [Page 7]
 
 Internet-Draft    AI/ML  security privacy implications     February 2024
 
@@ -432,27 +432,24 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
 5.1.  Future Work
 
    A use case document is needed.  So far 3GPP identified many use cases
-   and some of which are described above in this document.  All or some
-   of these usage areas of AI/ML can further be elaborated in a use case
-   document These use cases should make it clear why the security and
-   privacy protocols are needed.
-
-
-
-
-
-
-
-
-
-Sarikaya & Schott         Expires 9 August 2024                 [Page 8]
-
-Internet-Draft    AI/ML  security privacy implications     February 2024
-
+   and some of which are described above in this document.  New set of
+   use cases on Rule Based Automation, Autonomous Networks, Automated
+   Testing, Energy Efficiency and so on could be added to the existing
+   use cases.  All or some of these usage areas of AI/ML can further be
+   elaborated in a use case document These use cases should make it
+   clear why the security and privacy protocols are needed.
 
    A problem statement on AI/ML networking document is needed.  Such a
    document should identify the problems that possibly need a new
    protocol to be developed or need to identify extensions to an
+
+
+
+Sarikaya & Schott        Expires 11 August 2024                 [Page 8]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
+
    existing protocol.  One possibility in that direction could be
    refining the work points identified above and formulating them in
    terms of existing or to be defined in the future security and privacy
@@ -495,21 +492,19 @@ Internet-Draft    AI/ML  security privacy implications     February 2024
               <https://www.ericsson.com/en/reports-and-papers/research-
               papers/secure-federated-learning-5g>.
 
-
-
-
-
-
-
-Sarikaya & Schott         Expires 9 August 2024                 [Page 9]
-
-Internet-Draft    AI/ML  security privacy implications     February 2024
-
-
    [Srini21]  Srinivasan, A., "Difference between distributed learning
               versus federated learning algorithms", November 2021,
               <https://www.kdnuggets.com/2021/11/difference-distributed-
               learning-federated-learning-algorithms.html>.
+
+
+
+
+
+Sarikaya & Schott        Expires 11 August 2024                 [Page 9]
+
+Internet-Draft    AI/ML  security privacy implications     February 2024
+
 
    [TR22.874] 3rd Generation Partnership Project, "Study on traffic
               characteristics and performance requirements for AI/ML
@@ -540,7 +535,7 @@ Authors' Addresses
 
    Roland Schott
    Deutsche Telekom
-   Deutsche-Telekom-Allee 9
+   Ida-Rhodes-Strasse 2
    64295 Darmstadt
    Germany
    Email: Roland.Schott@telekom.de
@@ -557,4 +552,9 @@ Authors' Addresses
 
 
 
-Sarikaya & Schott         Expires 9 August 2024                [Page 10]
+
+
+
+
+
+Sarikaya & Schott        Expires 11 August 2024                [Page 10]
